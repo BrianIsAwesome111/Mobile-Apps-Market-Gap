@@ -1,0 +1,78 @@
+{
+  "sources": {
+    "ios": {
+      "file": "/Users/brianxiong/Downloads/AppleStore.csv",
+      "sha256": "706d0f1784a58f9ad0cbe2d06a298a177705e7de27dfce10c3b8e8c4169f6e60",
+      "bytes": 708110
+    },
+    "android": {
+      "file": "/Users/brianxiong/Downloads/archive(2)/apps.csv",
+      "sha256": "b1e9f351c1d2c6b1157a6111c2ba65cc9104dff1beb82e1db02e252eebbc2bdd",
+      "bytes": 53028430
+    }
+  },
+  "ios": {
+    "source_rows": 7197,
+    "cleaned_rows": 7197,
+    "source_columns": 16,
+    "cleaned_columns": 20,
+    "duplicate_rows_removed": 0,
+    "duplicate_id_rows_detected": 0,
+    "missing_cells_after_cleaning": 0,
+    "changes": [
+      "Renamed columns to descriptive snake_case names.",
+      "Trimmed leading and trailing whitespace in text fields.",
+      "Added platform, app_size_mb, is_free, and normalized content-rating fields.",
+      "Converted the volume-purchase indicator to a Boolean field.",
+      "Retained same-name apps because their app IDs are different."
+    ]
+  },
+  "android": {
+    "source_rows": 11176,
+    "cleaned_rows": 11176,
+    "source_columns": 46,
+    "cleaned_columns": 41,
+    "duplicate_rows_removed": 0,
+    "duplicate_id_rows_detected": 0,
+    "all_null_columns_removed": [
+      "sale_time",
+      "original_price",
+      "size",
+      "android_version",
+      "android_version_text",
+      "developer_internal_id",
+      "required_android_version",
+      "interactive_elements",
+      "recent_changes"
+    ],
+    "missing_ratings_retained": 2245,
+    "missing_install_bands_retained": 31,
+    "changes": [
+      "Removed nine columns that were entirely empty.",
+      "Renamed chart-relevant columns to descriptive snake_case names.",
+      "Trimmed outer whitespace and removed HTML tags from descriptions and summaries.",
+      "Converted ratings, reviews, and install counts to nullable numeric types.",
+      "Converted Unix/update and scrape timestamps to ISO 8601 UTC text.",
+      "Added platform, normalized content-rating, and text-length fields.",
+      "Retained missing ratings and installs as missing; no statistical imputation was used."
+    ]
+  },
+  "unified": {
+    "rows": 18373,
+    "columns": 23,
+    "platform_counts": {
+      "Android": 11176,
+      "iOS": 7197
+    }
+  },
+  "validation": {
+    "ios_unique_app_ids": true,
+    "android_unique_app_ids": true,
+    "unified_unique_app_keys": true,
+    "ios_rating_range_valid": true,
+    "android_rating_range_valid": true,
+    "prices_nonnegative": true,
+    "free_price_consistency": true,
+    "row_reconciliation": true
+  }
+}
