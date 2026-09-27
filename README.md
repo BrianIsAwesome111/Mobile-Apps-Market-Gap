@@ -34,9 +34,17 @@ not guarantees of commercial opportunity.
 - Sensitivity checks across multiple demand and rating thresholds
 - Cross-platform comparisons where fields are comparable
 - Light and dark appearance modes
+- Dedicated App Case Studies page with five documented successes and five
+  setbacks, researched explanations, practical lessons, and primary-source links
 - Filtered-data previews and CSV downloads
 
 ## Analysis sections
+
+**App Case Studies** uses official product posts, company reports, and a public
+filing to examine five strong product outcomes and five setbacks. It separates
+reported evidence from interpretation and links each case to its sources. These
+stories complement the app-market dataset; the dataset alone cannot establish
+why a product succeeded or struggled.
 
 The app follows a four-part decision framework:
 

@@ -9,6 +9,8 @@ import plotly.express as px
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+from case_studies import render_research_case_studies
+
 
 BASE_DIR = Path(__file__).resolve().parent
 #BASE_DIR = Path('/Users/brianxiong/Desktop/Data_Science_Stuff/Mobile Apps')
@@ -49,6 +51,7 @@ FRIENDLY_NAMES = {
 
 SECTIONS = [
     "Home",
+    "App Case Studies",
     "About the Study",
     "How Data Was Prepared",
     "View the Data",
@@ -61,6 +64,7 @@ SECTIONS = [
 
 SECTION_ICONS = [
     "bookmark",
+    "collection",
     "book",
     "database-check",
     "table",
@@ -1496,6 +1500,11 @@ if section == "Home":
         "Use the navigation pane to review the data preparation, explore the charts, then follow "
         "the next four sections from popularity through suggested next steps."
     )
+    st.stop()
+
+if section == "App Case Studies":
+    render_page_kicker("Research-backed product examples")
+    render_research_case_studies()
     st.stop()
 
 if section == "About the Study":
